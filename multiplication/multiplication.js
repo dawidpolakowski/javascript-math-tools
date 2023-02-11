@@ -1,14 +1,28 @@
-var foo = new Array(100);//create a 45 element array
 
-var n =0;
-for(var i=1;i<11;i++){
-for(var j=1;j<11;j++){
-  foo[n] = i*j;
-  n++;
-   }
-}
+function multiplicationMatrix(counter) {
+    let mArray = new Array(counter)
 
-for(var i=0;i<foo.length;i++){
-  document.write( '[' +  foo[i] + '] ');
-  if((i+1)%10 == 0 && i>0) {document.write('<br>'); }
+    let n = 1
+    for (let i = 1; i < 11; i++) {
+        for (let j = 1; j < 11; j++) {
+            mArray[n] = i * j
+            n++
+            console.log("n" + n)
+            console.log("i" + i)
+            console.log("j" + j)
+            console.log("i*j=" + i * j)
+
+
+        }
+    }
+
+    for (let i = 1; i < mArray.length; i++) {
+        if (mArray[i] < 10) document.write('[__' + mArray[i] + '__] ')
+        if (mArray[i] >= 10 && mArray[i] < 100) document.write('[__' + mArray[i] + '_] ')
+        if (mArray[i] == 100) document.write('[_' + mArray[i] + '_] ')
+        if (mArray[i] > 100) document.write('[_' + mArray[i] + '_] ')
+        if ((i % 10) == 0 && i > 0) { document.write('<br>') }
+    }
+
+    return mArray
 }
