@@ -12,42 +12,29 @@
 <html>
 
 <body class="text-center">
-    <h1>javascript-math-tools</h1>
 
-    <div> 
-        <h3>multiplicationMatrix(100)</h3>
-        <code>
-        function multiplicationMatrix(counter) { <br>
-            let mArray = new Array(counter)<br>
-            <br>
-            let n = 1<br>
-            for (let i = 1; i < 11; i++) {<br>
-                for (let j = 1; j < 11; j++) {<br>
-                    mArray[n] = i * j<br>
-                    n++<br>
-                    console.log("n" + n)<br>
-                    console.log("i" + i)<br>
-                    console.log("j" + j)<br>
-                    console.log("i*j=" + i * j)<br>
-                    <br>
-                    <br>
-                }<br>
-            }<br>
-            <br>
-            for (let i = 1; i < mArray.length; i++) {<br>
-                if (mArray[i] < 10) document.write('[__' + mArray[i] + '__] ')<br>
-                if (mArray[i] >= 10 && mArray[i] < 100) document.write('[__' + mArray[i] + '_] ')<br>
-                if (mArray[i] == 100) document.write('[_' + mArray[i] + '_] ')<br>
-                if (mArray[i] > 100) document.write('[_' + mArray[i] + '_] ')<br>
-                if ((i % 10) == 0 && i > 0) { document.write('<br>') }<br>
-            }<br>
-            <br>
-            return mArray<br>
-        }<br>
-    </code>
+
+    <div>
+        <h1>javascript-math-tools</h1>
+        <h2>
+            This page is an example of what features from this project are returning.
+        </h2>
+        <h3>This set of features was created for the purpose of creating a math board game</h3>
+        <h3>multiplicationMatrix()</h3>
+        <h2>
+            this function returns a matrix of 100 elements that are the result of the multiplication
+        </h2>
         <script>
-           multiplicationMatrix()
-           multiplicationMatrixColour()
+            multiplicationMatrix()
+        </script>
+
+        <h3>multiplicationMatrixColour()</h3>
+        <h2> this function returns a matrix of 100 elements resulting from the multiplication, <br>
+            the second returned array is the number of repetitions of the same result
+        </h2>
+
+        <script>
+            multiplicationMatrixColour()
         </script>
 
     </div>
